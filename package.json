@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack --experimental-build-mode compile",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "lenis": "^1.3.27",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
