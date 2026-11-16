@@ -13,9 +13,8 @@ export default function HoroscopePage() {
     <section className="sec bg-[#f5f3fd]">
       <div className="wrap">
         <SectionHeader
-          badgeText="Horoscope & Numerology"
           title="Check your horoscope and numbers"
-          description="Enter your name and date of birth to reveal your zodiac sign, your horoscope and your core numerology numbers — or simply browse any sign below."
+          description="Enter your name and date of birth to reveal your zodiac sign, your horoscope and your core numerology numbers or simply browse any sign below."
         />
         <HoroscopeSection />
 

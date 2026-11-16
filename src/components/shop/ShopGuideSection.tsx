@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Badge } from '@/components/common/Badge';
-import { FlameCandleIcon, HelpCircleIcon } from '@/components/common/Icons';
 
 export function ShopGuideSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -49,7 +47,6 @@ export function ShopGuideSection() {
       {/* Editorial Split (No Cards) */}
       <div className="subpage-guide-grid">
         <div className="subpage-narrative">
-          <Badge icon={<FlameCandleIcon size={14} />}>Botanical Sanctuary</Badge>
           <h3>Small-Batch Hand-Poured Ritual Candles</h3>
           <p>
             Every candle is hand-crafted in micro-batches using pure biodegradable soy wax, lead-free cotton wicks, and botanical essential oils. Formulated without synthetic phthalates or petroleum paraffin, they are designed to anchor sacred atmosphere for meditation, journaling, and tarot spreads.
@@ -77,7 +74,6 @@ export function ShopGuideSection() {
       {/* Domain-Specific FAQ (No Cards, Minimal Hairline Accordion) */}
       <div className="subpage-faq">
         <div className="subpage-faq-head">
-          <Badge icon={<HelpCircleIcon size={14} />}>Candle Care &amp; Orders</Badge>
           <h3>Frequently Asked Questions</h3>
           <p>Helpful advice on wax purity, wick maintenance, and express WhatsApp shipping.</p>
         </div>

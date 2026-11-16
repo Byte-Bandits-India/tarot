@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Badge } from '@/components/common/Badge';
-import { HelpCircleIcon } from '@/components/common/Icons';
 
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -18,14 +16,14 @@ export function FaqSection() {
     },
     {
       q: 'Is an online astrology consultation as effective as in-person?',
-      a: 'Yes. Astrological calculations and intuitive readings are anchored in your birth coordinates, intention, and energy rather than physical proximity. Online consultations offer focused, private, and distraction-free one-on-one attention with top practitioners.',
+      a: 'Yes. Astrological calculations and intuitive readings are anchored in your birth coordinates, intention, and energy rather than physical proximity. Online consultations offer focused, private, and distraction-free one-on-one attention with me.',
     },
     {
       q: "What if I do not know my exact time of birth?",
-      a: 'If your birth time is uncertain, our practitioners can utilize Prashna (Horary) astrology, Solar Chart systems, or Tarot and Numerology consultations, which do not strictly depend on your exact birth hour.',
+      a: 'If your birth time is uncertain, I can use Prashna (Horary) astrology, Solar Chart systems, or Tarot and Numerology consultations, which do not strictly depend on your exact birth hour.',
     },
     {
-      q: 'How do I prepare for a consultation with a healer?',
+      q: 'How do I prepare for a consultation?',
       a: 'Take a quiet moment beforehand to reflect on the core questions or areas of life where you feel stuck or curious. Have your date, place, and approximate time of birth ready. Keep an open heart and a notebook for personal insights.',
     },
   ];
@@ -38,10 +36,9 @@ export function FaqSection() {
     <section className="faq-accordion-section">
       <div className="wrap">
         <div className="sec-head">
-          <Badge icon={<HelpCircleIcon size={14} />}>Cosmic Clarity</Badge>
           <h2>Frequently Asked Questions</h2>
           <p>
-            Everything you need to know about our astrological consultations, card spreads, and readings.
+            Everything you need to know before booking a reading with me.
           </p>
         </div>
 

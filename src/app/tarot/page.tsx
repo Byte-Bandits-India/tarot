@@ -37,14 +37,14 @@ export default function TarotPage() {
     <section className="sec" style={{ background: 'linear-gradient(180deg, var(--bg), #f3ebf0)' }}>
       <div className="wrap">
         <SectionHeader
-          badgeText="Tarot Card Reading"
+          className="tight"
           title="Draw your three-card spread"
           description="Take a breath, hold a question in mind, and choose three cards from the fan. Each one will be revealed as your Past, Present and Future."
         />
 
         <TarotFan picks={picks} onPick={handlePick} isShuffling={isShuffling} />
 
-        <p className="hint text-center text-muted my-6 text-[15px]">{hintText}</p>
+        <p className="hint">{hintText}</p>
 
         <TarotSlots picks={picks} />
 

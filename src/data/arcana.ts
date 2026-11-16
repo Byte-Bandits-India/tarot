@@ -30,10 +30,43 @@ export const ARCANA_RAW: [string, string, string][] = [
   ['The World', 'Completion & Wholeness', 'A cycle completes in fulfilment. Celebrate how far you have come.']
 ];
 
+const SUITS: [string, string, string][] = [
+  ['Wands', 'Fire & Drive', 'your passion and ambition'],
+  ['Cups', 'Water & Emotion', 'matters of the heart'],
+  ['Swords', 'Air & Truth', 'your thoughts and decisions'],
+  ['Pentacles', 'Earth & Work', 'work, money and the material world'],
+];
+
+const RANKS: [string, string, string][] = [
+  ['Ace', 'New Beginnings', 'A fresh seed of potential arrives.'],
+  ['Two', 'Balance', 'Weigh your options and find your balance.'],
+  ['Three', 'Growth', 'Collaboration and early results take shape.'],
+  ['Four', 'Stability', 'Rest on firm ground and consolidate.'],
+  ['Five', 'Challenge', 'Friction asks you to adapt and grow.'],
+  ['Six', 'Harmony', 'Ease returns after the effort.'],
+  ['Seven', 'Perseverance', 'Stand your ground and trust your effort.'],
+  ['Eight', 'Momentum', 'Progress speeds up, so keep moving.'],
+  ['Nine', 'Resilience', 'You are almost there. Draw on your reserves.'],
+  ['Ten', 'Fulfilment', 'A cycle reaches its peak and completes.'],
+  ['Page', 'Curiosity', 'A message or lesson arrives. Stay open.'],
+  ['Knight', 'Pursuit', 'Act with focus, but mind the pace.'],
+  ['Queen', 'Mastery', 'Nurture and lead with quiet confidence.'],
+  ['King', 'Authority', 'Steady command and wise judgement guide you.'],
+];
+
+// Minor arcana (56 cards) completing the full 78-card deck.
+const MINOR_RAW: [string, string, string][] = SUITS.flatMap(([suit, suitTheme, focus]) =>
+  RANKS.map(([rank, rankTheme, message]): [string, string, string] => [
+    `${rank} of ${suit}`,
+    `${rankTheme} · ${suitTheme}`,
+    `${message} This speaks to ${focus}.`,
+  ])
+);
+
 export const FRONTS = ['card1', 'card2', 'card3'];
 export const SLOT_NAMES = ['Past', 'Present', 'Future'] as const;
 
-export const ARCANA: ArcanaCard[] = ARCANA_RAW.map(([name, subtitle, description], index) => ({
+export const ARCANA: ArcanaCard[] = [...ARCANA_RAW, ...MINOR_RAW].map(([name, subtitle, description], index) => ({
   name,
   subtitle,
   description,

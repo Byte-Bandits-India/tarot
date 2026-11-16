@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Badge } from '@/components/common/Badge';
-import { ZodiacCompassIcon, HelpCircleIcon } from '@/components/common/Icons';
 
 export function HoroscopeGuideSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -49,7 +47,6 @@ export function HoroscopeGuideSection() {
       {/* Editorial Split (No Cards) */}
       <div className="subpage-guide-grid">
         <div className="subpage-narrative">
-          <Badge icon={<ZodiacCompassIcon size={14} />}>Astrological Geometry</Badge>
           <h3>Decoding Your Sun, Moon &amp; Rising Signs</h3>
           <p>
             Popular culture often reduces astrology to just your Sun sign, but authentic astrological counsel considers your entire cosmic triad. Your Sun, Moon, and Ascendant together form a multidimensional blueprint of your inner psyche, subconscious emotional needs, and outer persona.
@@ -77,7 +74,6 @@ export function HoroscopeGuideSection() {
       {/* Domain-Specific FAQ (No Cards, Minimal Hairline Accordion) */}
       <div className="subpage-faq">
         <div className="subpage-faq-head">
-          <Badge icon={<HelpCircleIcon size={14} />}>Zodiac &amp; Transit FAQ</Badge>
           <h3>Frequently Asked Questions</h3>
           <p>Key clarity on planetary retrogrades, cusp dates, and cosmic mechanics.</p>
         </div>

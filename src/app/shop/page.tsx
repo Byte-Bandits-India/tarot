@@ -13,7 +13,6 @@ export default function ShopPage() {
     <section className="sec bg-bg">
       <div className="wrap">
         <SectionHeader
-          badgeText="Ritual Shop"
           title="Candles for your rituals"
           description="Hand-poured candles to set the mood for readings, meditation and moon rituals. Tap a candle for a quick view."
         />

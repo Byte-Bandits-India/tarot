@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Badge } from '@/components/common/Badge';
-import { TarotIcon, HelpCircleIcon } from '@/components/common/Icons';
 
 export function TarotGuideSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -49,7 +47,6 @@ export function TarotGuideSection() {
       {/* Editorial Split (No Cards) */}
       <div className="subpage-guide-grid">
         <div className="subpage-narrative">
-          <Badge icon={<TarotIcon size={14} />}>Card Reading Wisdom</Badge>
           <h3>How the Past, Present &amp; Future Speak Together</h3>
           <p>
             A three-card spread is not three isolated fortunes—it is a continuous narrative of cause, consciousness, and consequence. When interpreted as a unified arc, the cards reflect how past experiences shape your current state and point toward your emerging trajectory.
@@ -77,7 +74,6 @@ export function TarotGuideSection() {
       {/* Domain-Specific FAQ (No Cards, Minimal Hairline Accordion) */}
       <div className="subpage-faq">
         <div className="subpage-faq-head">
-          <Badge icon={<HelpCircleIcon size={14} />}>Tarot Answers</Badge>
           <h3>Frequently Asked Questions</h3>
           <p>Key guidance on interpreting archetypes and formulating intuitive queries.</p>
         </div>

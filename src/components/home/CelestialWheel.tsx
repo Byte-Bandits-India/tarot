@@ -1,4 +1,5 @@
 import React from 'react';
+import { HeroCard } from './HeroCard';
 
 export function CelestialWheel() {
   return (
@@ -106,10 +107,8 @@ export function CelestialWheel() {
           </g>
         </svg>
       </div>
-      <div className="hcard back" />
-      <div className="hcard front" />
-
-      
+      <HeroCard position="back" face="/assets/cards/card2.png" />
+      <HeroCard position="front" face="/assets/cards/card1.png" />
     </div>
   );
 }

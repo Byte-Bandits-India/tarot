@@ -1,28 +1,26 @@
 import React from 'react';
-import { Badge } from '@/components/common/Badge';
-import { SparklesIcon } from '@/components/common/Icons';
 
 export function HowItWorksSection() {
   const steps = [
     {
       num: '01',
-      title: 'Choose Your Modality',
-      desc: 'Select from 3-card Tarot pulls, Vedic birth chart reviews, numerology calculation, or a 1-on-1 session.',
+      title: 'Reach Out',
+      desc: 'Message or call me on WhatsApp, or email me, and tell me what you would like clarity on.',
     },
     {
       num: '02',
-      title: 'Share Your Coordinates',
-      desc: 'Provide your birth date, time, and focus question so the planetary matrix can be accurately mapped.',
+      title: 'Share Your Details',
+      desc: 'Share your birth date, time and place, or simply your question, so the reading can be personal to you.',
     },
     {
       num: '03',
-      title: 'Planetary Calculation',
-      desc: 'Our mathematical engines and certified readers analyze planetary transits, dasha cycles, and archetypes.',
+      title: 'Your Private Session',
+      desc: 'We talk one-on-one, confidentially, using astrology, tarot or numerology as your situation needs.',
     },
     {
       num: '04',
-      title: 'Receive Actionable Clarity',
-      desc: 'Gain instant readings online or connect directly on WhatsApp to resolve uncertainties with trusted guidance.',
+      title: 'Walk Away With Clarity',
+      desc: 'You leave with practical guidance and a calmer, clearer sense of your next step.',
     },
   ];
 
@@ -30,10 +28,9 @@ export function HowItWorksSection() {
     <section className="how-it-works-clean">
       <div className="wrap">
         <div className="sec-head">
-          <Badge icon={<SparklesIcon size={14} />}>Simple &amp; Seamless</Badge>
-          <h2>How Online Consultation Works</h2>
+          <h2>How a Consultation Works</h2>
           <p>
-            Four effortless steps from planetary calculations to personalized spiritual direction.
+            Four simple steps from your first message to a clearer path.
           </p>
         </div>
 

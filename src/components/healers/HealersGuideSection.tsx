@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Badge } from '@/components/common/Badge';
-import { HealerIcon, HelpCircleIcon } from '@/components/common/Icons';
 
 export function HealersGuideSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -49,7 +47,6 @@ export function HealersGuideSection() {
       {/* Editorial Split (No Cards) */}
       <div className="subpage-guide-grid">
         <div className="subpage-narrative">
-          <Badge icon={<HealerIcon size={14} />}>Lineage &amp; Ethics</Badge>
           <h3>Compassionate Astrological Doctors for Your Life</h3>
           <p>
             Just as you would consult an expert physician when the body feels worn, an authentic astrological counselor diagnoses spiritual blockages, planetary timing cycles, and pivotal karmic crossroads. Our healers blend classical Vedic lineage with trauma-informed empathy to illuminate your path.
@@ -77,7 +74,6 @@ export function HealersGuideSection() {
       {/* Domain-Specific FAQ (No Cards, Minimal Hairline Accordion) */}
       <div className="subpage-faq">
         <div className="subpage-faq-head">
-          <Badge icon={<HelpCircleIcon size={14} />}>Consultation Details</Badge>
           <h3>Frequently Asked Questions</h3>
           <p>Everything you need to know about preparing for your 1-on-1 consultation.</p>
         </div>

@@ -12,7 +12,6 @@ export default function NumerologyPage() {
     <section className="sec" style={{ background: 'linear-gradient(180deg, #f9f3ef, var(--bg) 40%)' }}>
       <div className="wrap">
         <SectionHeader
-          badgeText="Numerology & Zodiac Reading"
           title="Numerology Calculator & Personalized Reading"
           description="Discover your Life Path, Destiny, Soul Urge & Personality Numbers"
         />

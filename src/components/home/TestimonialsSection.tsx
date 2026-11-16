@@ -1,61 +1,59 @@
 import React from 'react';
-import { Badge } from '@/components/common/Badge';
-import { SparklesIcon } from '@/components/common/Icons';
+import { SONAL } from '@/lib/contact';
+import { WhatsAppIcon, ArrowRightIcon } from '@/components/common/Icons';
+
+const testimonials = [
+  {
+    quote:
+      'The birth chart reading with Sonal brought profound peace during a sudden career crossroads. Her timing prediction for October was remarkably accurate to the week.',
+    name: 'Priyanka Sharma',
+    role: 'Vedic Astrology Consultation, Mumbai',
+  },
+  {
+    quote:
+      'I draw the three-card tarot spread every Monday morning. It gives me grounded clarity about what truly matters instead of getting lost in daily anxiety.',
+    name: 'Arjun Sen',
+    role: 'Weekly Tarot Reading, Bengaluru',
+  },
+  {
+    quote:
+      'Sonal calculated my Life Path and Expression numbers with astonishing depth. It felt like being handed a compass for my true natural talents.',
+    name: 'Kavita Nair',
+    role: 'Numerology & Life Path, New Delhi',
+  },
+];
 
 export function TestimonialsSection() {
-  const testimonials = [
-    {
-      quote:
-        'The birth chart reading with Aanya brought profound peace during a sudden career crossroads. Her timing prediction for October was remarkably accurate to the week.',
-      author: 'Priyanka Sharma',
-      location: 'Mumbai',
-      session: 'Vedic Astrology Consultation',
-    },
-    {
-      quote:
-        'I draw the three-card tarot spread every Monday morning. It provides grounded clarity that helps me prioritize what truly matters rather than getting lost in daily anxiety.',
-      author: 'Arjun Sen',
-      location: 'Bengaluru',
-      session: 'Weekly Tarot Reading',
-    },
-    {
-      quote:
-        'Dev calculated my Life Path and Expression numbers with astonishing depth. It felt like someone had handed me a compass for my true natural talents.',
-      author: 'Kavita Nair',
-      location: 'New Delhi',
-      session: 'Numerology & Life Path',
-    },
-  ];
-
   return (
     <section className="testimonials-section">
       <div className="wrap">
         <div className="sec-head">
-          <Badge icon={<SparklesIcon size={14} />}>Seeker Stories</Badge>
-          <h2>Clarity Shared by Our Community</h2>
-          <p>
-            Real reflections from individuals who sought astrological insight and tarot guidance at life&apos;s crossroads.
-          </p>
+          <h2>
+            Real People. Real <em>Transformations.</em>
+          </h2>
+          <p>Don&apos;t take my word for it. Hear from people who found clarity at life&apos;s crossroads.</p>
         </div>
 
-        <div className="testimonials-flow">
-          {testimonials.map((item, idx) => (
-            <div
-              key={item.author}
-              className={`testimonial-item ${idx !== testimonials.length - 1 ? 'has-border' : ''}`}
-            >
-              <div className="quote-mark">&ldquo;</div>
-              <blockquote className="testimonial-body">
-                {item.quote}
-              </blockquote>
-              <div className="testimonial-footer">
-                <span className="author-name">{item.author}</span>
-                <span className="author-meta">
-                  {item.location} · <span className="session-tag">{item.session}</span>
-                </span>
+        <div className="testimonial-cards">
+          {testimonials.map((t) => (
+            <figure key={t.name} className="testimonial-card">
+              <span className="testimonial-quote-icon" aria-hidden="true">&ldquo;</span>
+              <div className="testimonial-stars" aria-label="5 out of 5 stars">
+                {'★★★★★'}
               </div>
-            </div>
+              <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+              <figcaption>
+                <span className="author-name">{t.name}</span>
+                <span className="author-meta">{t.role}</span>
+              </figcaption>
+            </figure>
           ))}
+        </div>
+
+        <div className="testimonial-cta">
+          <a href={SONAL.whatsappHref} className="btn primary" target="_blank" rel="noreferrer">
+            <WhatsAppIcon size={18} /> Book Your Consultation <ArrowRightIcon size={14} />
+          </a>
         </div>
       </div>
     </section>

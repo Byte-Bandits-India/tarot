@@ -2,7 +2,7 @@ import React from 'react';
 import { Badge } from './Badge';
 
 interface SectionHeaderProps {
-  badgeText: string;
+  badgeText?: string;
   badgeIcon?: React.ReactNode;
   title: string;
   description?: string;
@@ -18,7 +18,7 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={`sec-head ${className}`}>
-      <Badge icon={badgeIcon}>{badgeText}</Badge>
+      {badgeText ? <Badge icon={badgeIcon}>{badgeText}</Badge> : null}
       <h2>{title}</h2>
       {description && <p>{description}</p>}
     </div>

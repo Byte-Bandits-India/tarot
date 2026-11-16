@@ -13,7 +13,6 @@ export default function HealersPage() {
     <section className="sec bg-bg">
       <div className="wrap">
         <SectionHeader
-          badgeText="Healer Booking"
           title="Book a session with a healer"
           description="Choose your healer, pick a date and a time that suits you."
         />

@@ -1,22 +1,28 @@
 import React from 'react';
-import Link from 'next/link';
+import { SONAL } from '@/lib/contact';
+import { WhatsAppIcon } from '@/components/common/Icons';
 
 export function CtaBanner() {
   return (
     <section className="cta-banner">
       <div className="wrap">
-        <h2>Seek Clarity for the Path Ahead</h2>
-        <p>
-          Whether navigating career choices, relationship crossroads, or spiritual evolution, our gifted readers are here to guide you.
-        </p>
+        <h2>Book Your Personal Consultation</h2>
+        <p>Your journey to clarity starts here.</p>
         <div className="cta-buttons">
-          <Link href="/healers" className="btn primary">
-            Book a Healer Session
-          </Link>
-          <Link href="/tarot" className="btn cta-outline">
-            Draw a 3-Card Spread
-          </Link>
+          <a href={SONAL.whatsappHref} className="btn primary cta-wa" target="_blank" rel="noreferrer">
+            <WhatsAppIcon size={18} /> WhatsApp {SONAL.phoneDisplay}
+          </a>
+          <a href={SONAL.phoneHref} className="btn cta-outline">
+            Call {SONAL.phoneDisplay}
+          </a>
+          <a href={SONAL.emailHref} className="btn cta-outline">
+            {SONAL.email}
+          </a>
         </div>
+        <p className="cta-reminder">
+          A gentle reminder: you already have the answers within you. I&apos;m here to help you see
+          them clearly.
+        </p>
       </div>
     </section>
   );
