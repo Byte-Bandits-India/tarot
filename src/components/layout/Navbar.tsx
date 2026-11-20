@@ -25,6 +25,7 @@ export function Navbar() {
     { label: 'Horoscope', href: '/horoscope', icon: <ZodiacCompassIcon size={18} /> },
     { label: 'Numerology', href: '/numerology', icon: <NumerologyIcon size={18} /> },
     { label: 'Shop', href: '/shop', icon: <FlameCandleIcon size={18} /> },
+    { label: 'About', href: '/about', icon: <SparklesIcon size={18} /> },
   ];
 
   const isActive = (href: string) => {

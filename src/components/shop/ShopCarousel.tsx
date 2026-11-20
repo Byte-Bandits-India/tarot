@@ -75,10 +75,16 @@ export function ShopCarousel() {
             className="prod"
             onClick={() => handleOpenQuickView(prod)}
           >
-            <div
-              className="im"
-              style={{ backgroundImage: `url('${prod.image}')` }}
-            >
+            <div className="im">
+              <video
+                src={prod.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+              />
               <span>{prod.category}</span>
             </div>
             <div className="bd">
@@ -119,10 +125,17 @@ export function ShopCarousel() {
       <Modal isOpen={!!selectedProduct} onClose={handleCloseQuickView}>
         {selectedProduct && (
           <>
-            <div
-              className="im"
-              style={{ backgroundImage: `url('${selectedProduct.image}')` }}
-            />
+            <div className="im">
+              <video
+                src={selectedProduct.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+              />
+            </div>
             <div className="tx">
               <span className="badge mb-2">{selectedProduct.category}</span>
               <h3>{selectedProduct.name}</h3>

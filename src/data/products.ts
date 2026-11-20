@@ -5,10 +5,10 @@ export interface Product {
   price: number;
   description: string;
   highlights: string[];
-  image: string;
+  video: string;
 }
 
-const CANDLE_IMAGES = ['/assets/candle1.jpeg', '/assets/candle2.jpeg'];
+const CANDLE_VIDEOS = ['/assets/video/blue.mp4', '/assets/video/purple.mp4'];
 
 export const PRODUCTS: Product[] = [
   {
@@ -18,7 +18,7 @@ export const PRODUCTS: Product[] = [
     price: 499,
     description: 'A pair of clean-burning white pillar candles with glass holders. Perfect for tarot spreads, meditation and altar work.',
     highlights: ['Unscented, clean burn', 'Burn time ~40 hrs', 'Glass holders included'],
-    image: CANDLE_IMAGES[0]
+    video: CANDLE_VIDEOS[0]
   },
   {
     id: 1,
@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
     price: 649,
     description: 'A triple-wick soy candle in a frosted amber jar, with warm creamy vanilla that makes any reading space feel cosy.',
     highlights: ['Premium scented soy wax', 'Triple wick, even burn', 'Frosted amber glass jar'],
-    image: CANDLE_IMAGES[1]
+    video: CANDLE_VIDEOS[1]
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     price: 549,
     description: 'Set intentions on every new and full moon with these tall white pillar candles. Simple, pure and powerful.',
     highlights: ['Unscented, clean burn', 'Burn time ~45 hrs', 'Ideal for intention setting'],
-    image: CANDLE_IMAGES[0]
+    video: CANDLE_VIDEOS[0]
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
     price: 699,
     description: 'Soft golden light and a gentle vanilla aroma to wind down after a long day or ground yourself before a session.',
     highlights: ['Hand-poured soy wax', 'Burn time ~35 hrs', 'Reusable jar'],
-    image: CANDLE_IMAGES[1]
+    video: CANDLE_VIDEOS[1]
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const PRODUCTS: Product[] = [
     price: 599,
     description: 'A balanced set of pillar candles for your altar, available in two sizes to build a layered, ritual-ready display.',
     highlights: ['Two heights', 'Drip-free finish', 'Clean-burning wax'],
-    image: CANDLE_IMAGES[0]
+    video: CANDLE_VIDEOS[0]
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const PRODUCTS: Product[] = [
     price: 629,
     description: 'A wide-jar candle with three wicks for a generous glow. Pairs beautifully with journaling and tarot pulls.',
     highlights: ['Triple wick', 'Soy wax blend', 'Gift-ready jar'],
-    image: CANDLE_IMAGES[1]
+    video: CANDLE_VIDEOS[1]
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     price: 479,
     description: 'Calm, steady flames to anchor your breathing practice and clear your mind before readings.',
     highlights: ['Unscented', 'Long burn', 'Stable base'],
-    image: CANDLE_IMAGES[0]
+    video: CANDLE_VIDEOS[0]
   },
   {
     id: 7,
@@ -81,6 +81,6 @@ export const PRODUCTS: Product[] = [
     price: 679,
     description: 'A glowing amber jar with soft vanilla notes, made to turn any corner of your home into a sanctuary.',
     highlights: ['Premium soy wax', 'Cotton wicks', 'Burn time ~35 hrs'],
-    image: CANDLE_IMAGES[1]
+    video: CANDLE_VIDEOS[1]
   }
 ];
