@@ -69,7 +69,7 @@ export function Navbar() {
 
         {/* Right Side: Desktop Book a Session / Mobile Hamburger */}
         <div className="nav-actions">
-          <Link href="/healers" className="btn-sm desktop-only-btn">
+          <Link href="/healers" className="btn primary desktop-only-btn">
             Book a Session
           </Link>
 

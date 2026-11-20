@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { PRODUCTS, Product } from '@/data/products';
 import { Modal } from '@/components/common/Modal';
+import { WhatsAppIcon } from '@/components/common/Icons';
 import { createWhatsAppOrderLink } from '@/lib/whatsapp';
 
 export function ShopCarousel() {
@@ -162,9 +163,9 @@ export function ShopCarousel() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn wa"
+                  className="btn primary"
                 >
-                  Buy on WhatsApp
+                  <WhatsAppIcon size={18} /> Buy on WhatsApp
                 </a>
               </div>
             </div>

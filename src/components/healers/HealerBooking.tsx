@@ -52,13 +52,12 @@ export function HealerBooking() {
     getServerDateSnapshot
   );
 
-  const [selectedHealerIndex, setSelectedHealerIndex] = useState<number>(0);
-  const [duration, setDuration] = useState<'30m' | '60m'>('30m');
+    const [duration, setDuration] = useState<'30m' | '60m'>('30m');
   const [monthOffset, setMonthOffset] = useState<number>(0);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
-  const currentHealer = HEALERS[selectedHealerIndex];
+  const currentHealer = HEALERS[0];
   const currentPrice =
     duration === '30m' ? currentHealer.price30 : currentHealer.price60;
   const formattedPrice = `₹${currentPrice.toLocaleString('en-IN')}`;
@@ -102,12 +101,6 @@ export function HealerBooking() {
     if (d < todayMidnight) return false;
     if (currentHealer.offDays.includes(d.getDay())) return false;
     return true;
-  };
-
-  const handleSelectHealer = (index: number) => {
-    setSelectedHealerIndex(index);
-    setSelectedTime(null);
-    setSelectedDate(null);
   };
 
   const handlePrevMonth = () => {
@@ -167,25 +160,15 @@ export function HealerBooking() {
     <div className="booking-widget">
       {/* Left Column: Healer & Session Info */}
       <aside className="booking-widget-side">
-        <div className="bwidget-label">Select Healer</div>
-        <div className="bwidget-healers">
-          {HEALERS.map((h, i) => {
-            const isSelected = i === selectedHealerIndex;
-            return (
-              <button
-                key={h.id}
-                type="button"
-                className={`bwidget-healer ${isSelected ? 'active' : ''}`}
-                onClick={() => handleSelectHealer(i)}
-              >
-                <span className="bwidget-av">{h.initials}</span>
-                <span className="bwidget-meta">
-                  <span className="bwidget-name">{h.name}</span>
-                  <span className="bwidget-role">{h.service}</span>
-                </span>
-              </button>
-            );
-          })}
+        <div className="bwidget-profile">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={currentHealer.photo}
+            alt={currentHealer.name}
+            className="bwidget-photo"
+          />
+          <div className="bwidget-name">{currentHealer.name}</div>
+          <div className="bwidget-role">{currentHealer.role}</div>
         </div>
 
         {/* Duration Toggle */}
@@ -336,10 +319,9 @@ export function HealerBooking() {
               href={whatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn wa inline-flex items-center gap-2"
+              className="btn primary"
             >
-              <WhatsAppIcon size={16} />
-              <span>Book on WhatsApp</span>
+              <WhatsAppIcon size={18} /> Book Now
             </a>
           ) : (
             <button type="button" className="btn primary" disabled>

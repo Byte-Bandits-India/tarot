@@ -946,6 +946,23 @@ header.top {
   color: var(--muted);
 }
 
+.bwidget-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.bwidget-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+
 .bwidget-healers {
   display: flex;
   flex-direction: column;
@@ -1287,7 +1304,7 @@ header.top {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding: 34px 4px 10px;
+  padding: 18px 4px 10px;
   scrollbar-width: none;
   scroll-snap-type: x proximity;
 }
@@ -1299,29 +1316,42 @@ header.top {
 .sg {
   flex: 0 0 calc((100% - 7 * 16px) / 8);
   min-width: 104px;
-  height: 150px;
   position: relative;
-  border: 1px solid #d9d4ee;
-  background: #efecfb;
-  border-radius: 80px 80px 14px 14px;
+  border: 0;
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 10px;
+  gap: 4px;
+  padding: 0 0 6px;
   scroll-snap-align: start;
   color: var(--ink);
-  transition: 0.2s;
+  cursor: pointer;
 }
 
 .sg .g {
-  position: absolute;
-  top: 14px;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
   font-size: 44px;
   line-height: 1;
   color: #4f3e8b;
-  transition: transform 0.35s cubic-bezier(0.3, 1.4, 0.5, 1);
+  background: #efd0f9;
+  border: 3px solid transparent;
+  transition: transform 0.35s cubic-bezier(0.3, 1.4, 0.5, 1), border-color 0.2s;
   font-family: 'Segoe UI Symbol', 'Noto Sans Symbols', sans-serif;
+}
+
+.sg:nth-child(2n) .g {
+  background: #fcd9b6;
+  color: #8a4a1c;
+}
+
+.sg:hover .g {
+  transform: scale(1.06);
 }
 
 .sg b {
@@ -1332,17 +1362,16 @@ header.top {
 .sg small {
   font-size: 11px;
   color: var(--muted);
-  margin-top: 3px;
   white-space: nowrap;
 }
 
-.sg[aria-pressed="true"] {
-  background: #cfcaf2;
-  border-color: #7466c8;
+.sg[aria-pressed="true"] .g {
+  border-color: var(--plum);
+  transform: scale(1.1);
 }
 
-.sg[aria-pressed="true"] .g {
-  transform: scale(1.25) translateY(-6px);
+.sg[aria-pressed="true"] b {
+  color: var(--plum);
 }
 
 .tabs {

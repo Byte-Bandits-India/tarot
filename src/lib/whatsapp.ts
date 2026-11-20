@@ -1,4 +1,4 @@
-export const WHATSAPP_PHONE = '919080403951';
+export const WHATSAPP_PHONE = '919092220692';
 
 export function createWhatsAppOrderLink(productName: string, quantity: number, totalPrice: number): string {
   const formattedPrice = totalPrice.toLocaleString('en-IN');

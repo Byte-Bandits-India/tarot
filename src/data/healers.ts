@@ -7,6 +7,7 @@ export interface Healer {
   price30: number;
   price60: number;
   initials: string;
+  photo: string;
   offDays: number[];
   experience: string;
 }
@@ -14,39 +15,16 @@ export interface Healer {
 export const HEALERS: Healer[] = [
   {
     id: 0,
-    name: 'Aanya Rao',
-    role: 'Vedic Astrologer & Tarot Reader',
-    service: 'Birth Chart Reading',
+    name: 'Sonal',
+    role: 'Astrologer & Healer',
+    service: 'Astrology & Healing Session',
     price: '₹999',
     price30: 999,
     price60: 1699,
-    initials: 'AR',
-    offDays: [0],
-    experience: '12+ years experience',
-  },
-  {
-    id: 1,
-    name: 'Meera Iyer',
-    role: 'Reiki & Energy Healer',
-    service: 'Reiki Healing Session',
-    price: '₹1,299',
-    price30: 1299,
-    price60: 2199,
-    initials: 'MI',
-    offDays: [1],
-    experience: '9+ years experience',
-  },
-  {
-    id: 2,
-    name: 'Dev Malhotra',
-    role: 'Numerologist & Life Coach',
-    service: 'Numerology Consultation',
-    price: '₹799',
-    price30: 799,
-    price60: 1399,
-    initials: 'DM',
-    offDays: [2],
-    experience: '8+ years experience',
+    initials: 'S',
+    photo: '/assets/sonal.webp',
+    offDays: [],
+    experience: '',
   },
 ];
 
