@@ -15,7 +15,7 @@
   --font-sans: 'Poppins', system-ui, sans-serif;
 }
 
-@theme inline {
+@theme {
   --color-plum: var(--plum);
   --color-plum-dark: var(--plum-d);
   --color-plum-light: var(--plum-l);

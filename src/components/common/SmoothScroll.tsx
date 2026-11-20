@@ -3,12 +3,6 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 
-declare global {
-  interface Window {
-    lenis?: Lenis;
-  }
-}
-
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -27,8 +21,6 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       infinite: false,
     });
 
-    window.lenis = lenis;
-
     let rafId: number;
     function raf(time: number) {
       lenis.raf(time);
@@ -39,7 +31,6 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
-      delete window.lenis;
     };
   }, []);
 
